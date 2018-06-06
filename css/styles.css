@@ -667,13 +667,13 @@ ul > .active > a{
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
-  border-width:1px 0 0 0;
-  border-style: solid;
-  border-color: #fe0000;
 }
 .sidebar-module h4 {
   margin-top: 0;
   margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #fe0000;
 }
 .sidebar-module-inset {
   padding: 15px;
