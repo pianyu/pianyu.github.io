@@ -671,7 +671,7 @@ ul > .active > a{
 .sidebar-module h4 {
   margin-top: 0;
   margin-bottom: 10px;
-  border-width: 1px 0 0 0;
+  border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #fe0000;
 }
