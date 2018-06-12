@@ -338,13 +338,13 @@ p {
 }
 
 a {
-  color: #fe0000;
+  color: black;
   
 }
 
 a:hover {
 
-  color: #666;
+  color: #fe0000;
   text-decoration: none;
 }
 
@@ -619,7 +619,13 @@ ul > .active > a{
   margin-bottom: 30px;
 }
 
-.archive-year-wrap a,
+.archive-year-wrap a{
+  font-weight: 700;
+  text-align:center;
+  color: #fe0000;
+}
+
+
 .archive-article .article-datetime a {
   color: #333;
   text-decoration: none;
