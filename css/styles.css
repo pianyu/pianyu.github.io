@@ -861,13 +861,13 @@ ul > .active > a{
 
 .article-gallery {
   padding-top: 15px;
-  border-top: 1px solid #eee;
+  border-top: 1px dotted black;
 }
 
 /* Archives */
 
 .archive-year-wrap {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dotted black;
   font-size: 2em;
 }
 .archive-article {
