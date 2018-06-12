@@ -103,17 +103,30 @@
 /* prev/next navigation between articles */
 #article-nav {
   margin-top: 30px;
+  padding-bottom: 30px;
 }
 #article-nav>li {
   padding: 2px;
   font-size: 0.8em;
 }
-#article-nav>li>a {
-  border: 1px solid #337ab7;
+#article-nav>li {
+  border-width: 0px 0px 1px 0px;  
+  border-style: dotted;
+  border-color: #fe0000;
 }
-#article-nav>li>a:hover {
+/*#article-nav>li>a:hover {
   border: 1px solid #23527c;
+}*/
+.new-article {
+  position:absolute;
+  left:10px;
 }
+
+.old-article {
+  position: absolute;
+  right:50px;
+} 
+
 .article-nav-link-wrap .fa {
   margin: 4px 0;
 }
@@ -166,7 +179,7 @@
 .archive-article {
   margin: 30px 0;
 }
-.archive-article h1 {
+.archive-article h4 {
   margin: 0;
   font-size: 1.3em;
 }
