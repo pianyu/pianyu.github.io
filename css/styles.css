@@ -486,7 +486,7 @@ ul > .active > a{
   padding-top:30px;
   font-size: 18px;
   line-height: 1.5;
-  background-color: #fce6e6;
+  background-color: #f0f1f3;
 }
 .blog-main > article:last-of-type {
   margin-bottom: 30px;
@@ -568,7 +568,7 @@ ul > .active > a{
 }
 .article-entry .article-more-link {
   margin: 15px 0;
-  color:#89898a;
+  /*color:#89898a;*/
 }
 
 .article-entry .article-more-link > a {
