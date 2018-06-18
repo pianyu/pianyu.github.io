@@ -117,16 +117,34 @@
 /*#article-nav>li>a:hover {
   border: 1px solid #23527c;
 }*/
-.new-article {
-  position:absolute;
-  left:10px;
+
+@media only screen and (max-width: 768px) {
+  .new-article  {
+    float:left;
+    text-align:center;
+    margin: 10px;
+  }
+
+  .old-article {
+    float:left;
+    text-align:center;
+    margin: 10px;
+  }
 }
 
-.old-article {
-  position: absolute;
-  right:50px;
-} 
+@media only screen and (min-width: 768px){
+  .new-article {
+    display: inline;
+    position:absolute;
+    left:10px;
+  }
 
+  .old-article {
+    display: inline;
+    position: absolute;
+    right:50px;
+  } 
+}
 .article-nav-link-wrap .fa {
   margin: 4px 0;
 }
