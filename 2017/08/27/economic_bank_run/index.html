@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>理解银行挤兑 |  知了</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="无摘要">
+<meta name="keywords" content="银行,翻译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解银行挤兑">
+<meta property="og:url" content="https://pianyu.github.io/2017/08/27/economic_bank_run/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="无摘要">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-19T07:57:34.415Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="理解银行挤兑">
+<meta name="twitter:description" content="无摘要">
+  
+    <link rel="alternate" href="../../../../atom.xml" title="false" type="application/atom+xml">
+  
+
+    <!-- <link rel="icon" href="/images/cicada.png">-->
+  
+    <link rel="icon" href="../../../../images/cicada.png" >
+   
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../../../../css/styles.css">
+  
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light mb-2">
+  
+    <a class="navbar-brand" href="/">
+        <img src="../../../../images/cicada_brand.svg" width="50px">
+    </a>
+  
+
+
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-menu-navbar" aria-controls="main-menu-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="main-menu-navbar">
+    <ul class="nav navbar-nav mr-auto">
+      
+        <li class="nav-item ">
+          <a class="nav-link"
+            href="../../../../index.html">主页
+          </a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link"
+            href="../../../../archives/">存档
+          </a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link"
+            href="../../../../categories/">分类
+          </a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link"
+            href="../../../../tags/">标签
+          </a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link"
+            href="../../../../about/">关于
+          </a>
+        </li>
+      
+    </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  		
+  <img class="blog-header-img" src="../../../../images/cicada_title.svg" height="60" ></img>
+ 
+  
+  
+    <p class="lead blog-description">选则不遍，教则不至，道则无遗者矣。则极高明而道中庸。</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-economic_bank_run" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h5 class="article-title" itemprop="name">
+      理解银行挤兑
+    </h5>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    
+      <div class="article-datetime">
+  <a href="" class="article-date"><time datetime="2017-08-27T12:17:29.000Z" itemprop="datePublished">2017-08-27</time></a>
+</div>
+
+    
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/economic/">economic</a>
+  </div>
+
+
+    
+        <a href="https://pianyu.github.io/2017/08/27/economic_bank_run/#disqus_thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+    
+  </div>
+
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+            
+        
+        <div class="article-excerpt">
+          <p>无摘要<br> 
+        </div>
+        </p>
+<p>有两种对<strong>银行挤兑</strong>所建立的解释:储户之间的协调问题和银行管理者和储户之间的信息不对称。我提供一个对<strong>什么会发生短期信贷挤兑</strong>看似不可能但是完整的解释：没人具有完整的信息。</p>
+<p>无论是银行还是影子银行系统都会使用<strong>短期债务</strong>来为长期债务,不太具有流动性的资产进行融资。<strong>短期债务被设计用来提供有效最小化信用,流动性,和到期风险</strong>这样持有者可以将这个claims视为最接近货币的替代品。对发行这种债务的机构来说它降低了资金成本并且具有其他的优势,但是它带给这些机构后续的风险。短期债务的持有者可以快速的退出.当他们集中这样做的时候–挤兑–机构将被迫打折出售资产,从而对商品价格产生冲击。</p>
+<p>不好的宏观经济发展或其他或其他能够对将短期债务当作货币一样的持有者是否仍然安全产生怀疑的信号<br>是<strong>挤兑常见的触发因素</strong>。以银行为例, 短期信贷者是储户.<strong>坏消息是否会引发挤兑</strong>要依赖银行管理者或银行的监管者对确保储蓄他们的claims足够安全到他们没有理由退出的能力。比如,一个银行,可能提供它持有的贷款价值的可信赖的信息，或者监管者可能检查银行的健康状况。</p>
+<p>向比较而言,影子银行系统发行的短期债务采用以资产为担保的商业票据的形式。ABCP的价值不仅仅依赖对应贷款的价值,也依赖ABCP的条款,将对应贷款转换为打包进入ABCP管道的资产为担保的证券的证券结构的条款,以及其他因素。还有,相较于银行系统,这些机构发行短期债务没有经过审慎的监管。因此,没有经常性的无论是私人还是公开的会议来提供坏消息对ABCP部位的好信誉的影响评估所需要的信息。<strong>在面对坏消息的时候,货币索赔claimants的请求仍然有能力并刺激挤兑的发生。</strong>但是,相较于银行,没有人有信息来阻止挤兑的发生。</p>
+<p><strong>the depositors’ coordination problem</strong>储蓄的定位问题</p>
+<p>我们的实验性设计是基于两个人的坐标游戏它抓住了银行挤兑的sunspot model的本质.在这个游戏中有两个存款户,一个银行中储蓄户A和储蓄户B。两个储户同时决定是否保持他们的存款到期,或者取出他们的资金。如果两个储户让他们的资金留在银行里面,<strong>那么银行就不用变现任何的投资并且两个储户都可以接收到利息回报为R</strong> 如果任何一个储户取出他们在银行的储蓄那么银行就需要变现了。我们假定<strong>银行投资的变现价值是L</strong>。结果是,如果只有一个储户取款,那么有一个人能够拿到L的回报,而另外一个人得到的为0。如果两个储户都提款变现了,那么每个都可以接收到L/2的回报。</p>
+<p>在这个实验中R分为两种: R强 = 60或者 R弱 = 50, 表示一个银行各自有一个强或弱的资产组合,变现价值被设定为L = 40;</p>
+<p><strong>treatments</strong>处理方法</p>
+<p>我们研究的目的是检验在哪一种情况下一个银行的一个储蓄之间的协调失败可能触发另外一个银行的储蓄之间的协调失败。这里我们常采用两个主体部分来分别玩银行挤兑博弈。第一个部分主体被称为leaders。<br>第二部分的主体被称为followers。在所有的处理中,leaders被告知博弈如图一显示的结构,并被告知他们的银行的R采用的是R强还是 R弱。有了这些信息,这两个主体同时进行决策是继续保留存款还是取款。</p>
+<p>在所有的处理中,followers被通知follower的银行有一半是strong assets(R强)和一半的弱资产(R弱)<br>因此,相较于leaders,followers对他们银行资产的状况不确定.followers的信息集合随着不同的处理会发生变化。</p>
+<p>我们第一个处理方式是<strong>No-linkages treatment</strong>. 这个处理中,leader博弈的结果比如出现取款的数字是0，1或2–会被告知给followers并且变成普遍的消息。所有的followers也会在他们进行决策之前被告知leaders知道他们银行的资产质量。在No-linkages treatment中,还有重要的是followers被告知他们的银行真实资产质量的实际情况与leaders的银行的无关。followers普遍知道他们的银行和leaders的银行没有经济上的联系。</p>
+<p>第二种处理方式是<strong>linkages treatment</strong>。 与No-linkages treatment一样, followers被告知leaders的博弈种发生取款的数字,以及leaders在他们进行决策的时候已经知道他们银行的资产质量。相较于No-linkages treatment, followers被告知他们银行的资产质量和他们参照的leaders的是相同的。在这个处理种followers普遍知道他们的银行和leaders的有经济上的联系。</p>
+<p>第三种处理方式被称为<strong>Baseline treatment</strong>。在这个处理中,followers没有被告知leaders的行为。和其他两个处理相同的是,followers对他们银行资产质量是不确定的并且知道 R有一半一半的可能是R强或R弱。这个处理中被作为<strong>我们带有不确定回报的银行挤兑博弈主体行为的基准</strong>。</p>
+<p>需要特别强调的是在linkages treatment中(与No-linkages treatment相同)followers的博弈构成了一个坐标博弈,并且与leaders game传递的信息无关。尽管<strong>对leaders行为的观察可以提供这个处理中followers他们自己银行的资产质量的信号</strong>。followers的博弈提供的是两个完全与他们对资产质量的信念无关的纯策略平衡。因此Linkage treatment与消息驱动的银行挤兑的模型的结构(取出存款是世界处在某些情形下和提供关于已经感知到的世界的状况的噪音信号的其他储户行为的独特的平衡)。我们能的linkages treatment也与<strong>市场原则的模型(这种模型中银行坏的投资习惯可能导致取出存款成为储户唯一和最佳的响应)</strong>不同。</p>
+<p>我们的实验设计会对他们外部验证进行它的两个具体属性的讨论。首先,我们的最基本的银行挤兑博弈有一系列的服务约束但是没有储蓄保险。 这不表示我们实验的发现<strong>只是与理解零售储户或批发储户的行为相关</strong>。最近一些研究都强调零售储户对储蓄保险有非常有限的知并且甚至消息灵通和保险保障储户也会从窘迫的银行里取出存款。不仅仅如此,这次设计<strong>在银行激励的语境下</strong>就储蓄保险的当前水平降低提供一个经验事实的解释。</p>
+<p>第二,我们设计中的followers在出现流动性枯竭的时候面临银行的回报不确定性问题。这个方法是参照Chakravarty et al提出的，他实现一个银行挤兑博弈在这个博弈中银行的变现值不确定的情况下。我们的设计选择是被捕捉在linkages treatment中银行的资产通用性的角色的想法所激发的。与此同时我们设计决策暗示了followers的储蓄面临了回报的不确定性。<strong>我们将这种不确定性解释为对储户(没有投保)的期望回报的破产insovency风险(由于信用风险,利率风险,市场风险)的潜在风险</strong>。</p>
+<p><strong>流程</strong></p>
+<p>我们进行了14个实验课程，每个session有16或20个参与者。一共264个阿姆斯特丹大学的本科学生曾参与我们的实验。在每个课程中,16-20的参与者随机匹配四个玩家的小组。在课堂开始的时候,一个四个玩家的小组被随机成为leaders的角色。其他的三个或者四个小组被安排作为followers的角色。每个参与者玩两轮的银行挤兑游戏：在每个小组的四人中,玩家被安排在第一轮和第二轮进行配对这样他们玩了每轮的有不同参与者的两轮的两人协调博弈。总计,60个参与者被安排了leaders的角色，184参与者被安排了followers的角色。 在每个课程中所有的玩家被安排玩相同treatment中followers的角色。</p>
+<p>从leaders小组我们在每个课程中(在第一轮有两次博弈,第二轮有两次博弈)获得了四次银行挤兑博弈的观察数据。两个leader’s 博弈通过强资产 R强实现,另外两个通过弱资产(R弱=50)实现。leader的博弈是通过强还是弱资产实现是在每个课程开始之前随机决定。随机产生的结果会告知leaders。</p>
+<p>在No-linkages和linkages treatments的每个课程中我们向一个不同的followers的小组展示四个leaders博弈的结果。对于每个follower小组,银行资产的质量在两轮是常量。在No-linkage treatment,对于followers的银行资产的质量是在课程之前随机决定的:有两组followers被安排到强银行资产,另外两组被安排到弱银行资产。 在linkages treatment，followers的银行资产质量被直接连接到被观察的leaders的银行资产进行连结,因此也是在课程开始之前随机决定的。在Baseline treatment。每个follower pair的银行资产的质量会在课程开始之前随机决定。</p>
+<p>所有的followers都被通知发对于他们的小组的银行资产质量的决定的过程。这让我们可以：<br> 1) 用符号来指代是弱资产还是强资产的确切数字。<br> 2) 确保每节课程leaders的weak和strong banks的数字都是相同的,并且followers知道这个事实。</p>
+<p> 在followers进行每个决策之前我们先引出他们对他们的银行的其他储户行为和对银行资产质量的想法。首先,我们让参与者表达他们对他们银行具有强资产的程度的想法。接着followers必须指出与他们匹配的另外一个储户的取出她的存款的可能性。想法是通过一个7-point likert scale来进行测量的,并且以从0（非常不可能）到1(非常可能)的程度来进行表示。</p>
+<p> 参与者在课程开始的时候接收到共同的指令,这些指令会被大声的读出。参与者从屏幕上直接接收到对于银行挤兑博弈的具体的指令。leaders接收到的指令和followers不同。重点是,leaders不知道他们的选择会在之后与followers进行沟通,这是为了避免任何类似已知性对他们行为的影响。followers被告知leaders不知道他们的选择被其他人所知晓。银行挤兑博弈被嵌入到银行的语境。在实验开始之前,每个参与者必须通过一个测试,这个测试含有特定的关于他们必须计算两个玩家的回报来确信他们理解回报结构和决策过程的问题。这些练习问题不会被记录到最终的结果,但是这些测试问题的回报对于在实际任务中研究的博弈中大小和结构是相同的。<strong>只有在所有参与者正确的计算了回报程序才会进入到主任务</strong>。</p>
+<p> 依据银行挤兑博弈的结果,参与者可以在每轮可以赚取0到60个实验单位。在实验的结尾处一轮会被随机选中进行实际支付来避免财富效应。在实验结尾处每个实验单位可以换取0.10欧元来作为参与的偿付，最多获取佣金是7欧元。</p>
+<p> 成本厌恶已经发现能影响协调博弈中的行为,并因此在当前实验中控制它。在参与者在银行挤兑博弈的两轮中都完成他们的决策之后我们通过在实验单位获得和损失机会均等的情况下提供给参与者六个风险等级来引出成本倾向。参与者根据在所有六个决策中依照风险预期的结果产生的决定来赚取实验单位。在每个课程结束的时候我们也会根据屏幕问答来选择社会经济角色(年龄,gender,国籍,银行账户号)。</p>
+<p> <strong>传播渠道:预测</strong></p>
+<p> 我们实验的银行挤兑游戏是一个两人参与的协调博弈.在共同利益协调博弈中已有的证据认为博弈的回报结构(比如,回报优先vs风险优先的平衡)在我们的所有的案例处理中的行为会提升焦虑点。</p>
+<p> 我们推测我们实验的一个储户对选择<strong>保留存款</strong>或<strong>取款</strong>的决策依据她对银行强硬的基本面的主观认识程度(p)和对她的银行的另外一个储户取出存款的主观认识程度(q). 给定我们博弈的参数和他们的主观认知程度(p,q)，一个储户的回报预期是:</p>
+<p> E(payoff|Keep) = (1-q)x p x Rstrong + (1-q) x (1-p) x Rweak = (1-q)(50+10p)</p>
+<p> 储户决策的可能经历过的信息传播渠道:</p>
+<ol>
+<li>相信银行的资产很强(B) –&gt; 进行存款处理决策(E)</li>
+<li>相信银行的另外一个储户会取款(A) –&gt;进行存款处理决策(D)</li>
+<li><p>相信银行的资产很强(B),但是知道银行的另外一个储户取出存款(C)–&gt;保留存款和取款的可能性(D)但是需要参照储户的主观认知程度(p,q)</p>
+<p>我们推测leaders博弈中观察到的取款行为向(p,q)的想法传播,应该随着不同的处理而不同。在linkages treatment,储户可能会基于对leaders行为的观察(路径 B)更新他们的关于银行资产的质量。因为<strong>保留存款,保留存款</strong>平衡会在银行资产很强R强的时候相较弱资产R弱的时候获得更多的回报,从而强资产银行而言，<strong>leaders对协调的刺激会更强</strong>。leaders的取款行为可能因此在linkages treatment中followers的银行的基本面上提供一个公开的噪音信号。followers对他们银行能力的预期更新可能接着导致对另外一个储户的想法的影响(路径C)。这会在两者出现零和博弈心态的时候产生。</p>
+<p>上面的信息传播路径(路径B和路径C)不应该与No-linkages treatment<strong>followers没有可供参照的消息也没有办法对银行资产产生主观的认知</strong>中的储户的行为相关，因为从leaders博弈观察到的取款对followers银行的资产不产生信息价值。然而,No-linkages treatment(与linkages treatment一样)中也能产生leaders取款的消息对另一个储户的行为想法的直接影响(路径A)。比如saliency effects的证据认为followers对leaders取款行为的共同观察可能影响他们对协调问题的感知以及对于其他储户如何感知博弈的想法。</p>
+<p>我们在实验中测试了这些不同路径在传染性的表现。因为在linkages treatment传播机制的乘数效果，在银行基本面和可能的纯显著效应,我们认为<strong>在linkages treatment中的传染性和No-linkages一样strong</strong>，在No-linkage treatment中,只有salience channel可能相关。</p>
+</li>
+</ol>
+<p><strong>个人经历能缓解传导吗？</strong></p>
+<p>在所有的三个treatments中followers参与两轮不同的银行挤兑博弈。上面显示的结果只是基于第一轮的表现,因为这让我们可以隔离leaders取款对followers行为的影响。在这一部分,我们使用followers第二轮的<br>表现来研究从leaders向followers的银行挤兑的传导是否会由于followers在第一轮的个人经历而缓解。我们的流程的选择是为了让观察到leaders博弈的followers在1和2轮不会发生角色变化(这是followers之间的普遍认知)。还有,followers在第一二轮匹配不同参与者也是共同的认识。<strong>第二轮行为因此可以让我们研究在经历过一轮协调博弈后的过去的个人经历</strong>如何缓解leaders博弈取款的目睹对followers取款倾向的影响。</p>
+<p>表6表示followers在treatment第二轮行为的汇总统计。我们博弈中followers个人经历的重要性被Baseline treatment的结果证实。在这个treatment中我们发现在第一轮目睹了配对储户取款的followers相较于在没有目睹配对储户取款的followers有超过两倍的可能性在第二轮取款(57% vs 24 %).这个结果和先前在重复协调博弈中有经验的角色的实验证据相一致。</p>
+<p>对于linkages和No-linkages treatments我们提出了以目睹leaders博弈取款为条件和在匹配的参与者在第一轮是否取款为条件下followers的取款频率。<strong>我们尤其感兴趣是在linkages treatment中银行挤兑传染性是否会被followers在首轮正向的个人经历影响</strong>。表6的结果表明就是如此。在第一轮目睹了leaders取款但是没有目睹配对储户取款的followers =相较于= 在第一轮目睹了leaders取款并且目睹了配对储户取款的followers在第二轮减少到少于1/3的可能性取款(22% vs 68%)。</p>
+<p> <strong>实验结果</strong></p>
+<p><strong>leaders行为</strong><br>根据银行的资产质量的传播性，leaders的取款行为。我们发现在银行weak的时候更多的leaders取款(38%)相较于银行资产strong的时候(23%).尽管leaders博弈的结果不是我们研究的主要兴趣,实验的结果由于两个原因而然人欣慰:首先,我们获得leaders取款的变量参数,这会在linkages和No-linkages treatments中向followers告知。第二，leaders的取款率说明linkages treatment leaders取款确实为followers提供了他们银行质量的噪音信号。</p>
+<p>总的说来,19 leaders博弈没有取款,21 leaders 博弈有一个取款会被告知followers。由于我们在leaders都取款的情形发现非常少的情况，后续的分析我们将会比较leaders博弈中的没有取款和有一个取款的情形。</p>
+<p><strong>银行间取款的传播效应</strong></p>
+<p>我们银行间传播的分析是依据followers在baseline,No-linkages,和linkages treatments中首轮的行为。我们忽略followers第二轮的行为来避免混淆银行间的传播,比如，从leaders到followers,通过银行内部的潜在溢出效应,比如,从第一轮的followers到第二轮followers。在No-linkages和Linkages treatment我们报告followers在他们是否观察到leaders博弈中取款的条件下的行为。</p>
+<p>在linkages treatment我们发现leaders的取款对followers的行为和想法产生strong effect。followers在她观察到没有leader取款情况下的取款倾向(13%)相较于当她观察到至少一个leader取款(52%)的取款倾向降低到了1/4.与baseline treatment(23%的取款率)相比较表明leaders博弈的取款时高度传导性的:他们超过两倍的扩大followers的取款倾向。对leaders博弈中没有取款的观察相较于baseline treatment降低了followers的取款倾向,尽管这个影响不是特别明显。</p>
+<p>在linkages treatment我们发现leaders博弈的取款影响followers对于他们银行资产质量的想法，也影响了他们对于他们银行另一个储户取款的倾向–参照路径A和B。<strong>leaders取款对followers对于他们银行其他储户的行为的想法有一个非常强烈的影响</strong>。认为另外一个储户会取款的程度相较于baseline的0.31提升到了0.52。注意另外一个储户取款的可能性预期普遍高于leaders博弈中平均取款频率,甚至高于银行弱资产的时候(0.38).这个观察表明leaders取款对于linkages treatment中的[withdraw, withdraw]的加剧有strong的影响。尽管我们发现leaders的取款只提供资产质量的一个特别的噪音信号，我们发现在linkages treatment中 followers只是有限程度更新了他们对于银行资产的想法(更主要的是担心进入零和博弈的情景中,followers对银行资产质量的想法的更新很大程度于观察到的leaders的行为一致,实验表明当followers观察到leaders博弈中有取款他们将会修正他们认为银行资产是strong的想法到0.375，如果没有取款的情况下，就会增加他的期望值到0.554).相较于baseline treatment，followers在观察leaders博弈中到至少一个取款的时候会对他们资产的质量更加的悲观(认为银行是strong的倾向是0.50低于baseline的0.55).</p>
+<p>相较于我们之前的预测我们发现在 the No-linkages treatment中,followers的取款行为与leaders的取款无关(纯粹是对自己银行的资产状况担心而产生的与另一位储户的达成的零和博弈)。与followers对leaders的取款行为的观察无关，他们的取款倾向与Baseline treatment相比很难进行区分。如意料之中,leaders的取款没有影响followers对银行资产质量的想法。尽管与我们预料的相反,我们发现leaders的取款对followers对他们银行的另外一个储户的取款倾向不会产生影响。我们的结论因此认为leaders取款不会显著影响No-linkages treatment的银行挤兑平衡。</p>
+<p>表5表示对followers在baseline,linkages和No-linkages treatments中的取款和想法。在所有的样本中，我们控制参与者的社会-经济 类型: 年龄,性别,银行账号,还有他们对损失的态度。第一二两栏用来确认在No-linkage treatment中关于银行资产质量和银行中另一个follower取款倾向的想法与leaders的取款无关。这两栏。相较而言,4和5栏的结果证实了在linkages treatment中对银行资产质量和对其他储户的取款倾向的想法会明显受到leaders取款的影响。A和B的传导管道只有在linkages出现的情况下才会被激活。</p>
+<p>3,6,7栏考虑到了这两种类型的想法对取款决策的影响。同时包含对银行的看法和对其他储户的看法,我们在三个treatments中的观察到,对其他储户的行为预期对取款有明显的预测作用，尽管对银行的看法没有这样的预测作用。在No-linkages和Baseline情景下对其他储户的看法的系数是几乎相同。而在linkages treatment重点的系数则相较于No-linkages或Baseline treatments的预测大了几乎1.5倍(信息可知性对A,B路径的传导产生了明显的影响)。6栏用来预估其他储户看法的数据表明这个想法增加到22百分点–这是对leaders博弈中观察到取款的平均影响–将会增加一个follower取款的倾向到23个百分点。</p>
+<p><strong>讨论和总结回顾</strong></p>
+<p>我们进行了一个实验室实验来通过那些路径和在哪些信息条件下一个银行由于储户产生的基于恐慌的挤兑可能会触发另外一个银行的的基于恐慌的挤兑。我们结果表明基于恐慌的取出存款可能在有经济相关性的银行间进行明显的传导因为一个银行产生的挤兑让银行挤兑平衡的处境对于另外银行的储户更加的明显,导致主观看法的更新。我们没有发现没有经济连接的银行之间的取款的证据。这些结论的创新性在于我们指出:<br>I) 银行挤兑的传导是由对于其他储户的预期所引发的<br>II) 这个预期路径当银行资产是不相关的时候是不明显的<br>III) 取款决策的影响最终通过<strong>对其他储户的看法</strong>进行传播。</p>
+<p>我们的发现支持下面的推测：<br>   因为从good平衡下移开需要在看法上发生很大的变化,在没人预料的情况下一个挤兑的形成需要所有(或几乎所有)的储户看到something(并且相信其他人也看到了)。<br>然而,我们的结果也表明了<strong>一个挤兑的形成的进一步的必要条件</strong>可能是共同观察到的事件被认为是与参与的银行有经济上的关联. 因此,恐慌传导不简单是一个非理性的心理影响,也是<strong>被相关的经济事件以及他们对主观看法的影响</strong>所驱动。一个这样的事件可能是对一个银行的挤兑的目睹,并且这个银行被认为是与参与银行类似并且增加了挤兑平衡的显著性。我们的结果因此是在资产相似性的条件下由于关于银行违约的信息产生的金融传导的理论组成。</p>
+<p>我们的发现在对基于恐慌和基于信息的银行挤兑的区分上提出一个有趣的视角。他们表明<strong>尽管银行挤兑可能由于恐慌而产生,但是这不一定表示他们的发生是随机的</strong>。我们的结果表明经济关联性信息增加了基于恐慌的银行挤兑的可能性–甚至当这个信息没有改变取款的货币激励。信息增加了银行挤兑平衡的显著性的这个事实可能有效的触发一个挤兑。</p>
+<p>从一个政策角度我们的发现表明基于相同的资产部位and/or类似的组合元素的银行间的经济连结性可能对除了对银行的金融报表和权益回报产生直接经济影响还对金融稳定性产生进一步的负面的影响。<br>银行间的经济连结提升了银行间取款的传导,尤其当储户意识到这些经济连结的时候。类似的系统性问题对于<strong>分享相同经济模型的国内银行集群所划定的银行系统</strong>来说更加急切。我们的结论是由Acharya,Ibragimove et al.和Wagner的理论组成，这些理论通过强调金融机构的资产面缺乏多样性的负面外部事实指出多样化的黑暗面。对于监管者来说,这也突出了为了在金融系统中削减金融脆弱性并鼓励更进一步的多样性如何监控和监管具有相同部位的银行间的经济连结的问题。</p>
+<p>我们的发现也提供了对于<strong>金融部门的信息披露和稳定性</strong>的讨论。在我们的实验中followers对于他们的银行资产质量没有完美的信息。但是他们对于他们银行是否于leaders的银行有经济上的连结有完美的消息。我们结果表明<strong>关于银行间的经济连结的透明度</strong>可能会促进银行间的取款传导。对于银行间的经济连结性的存在或不存在的缺少透明性是否导致更少或更多的传导是我们留给未来研究的一个问题。</p>
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <!--<a data-url="https://pianyu.github.io/2017/08/27/economic_bank_run/" data-id="cjilg0yrw0001a0uoqni837w5" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a> -->
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/翻译/">翻译</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/银行/">银行</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<div id="article-nav">
+  
+  <div class="new-article">
+    <a href="../../../09/18/economic_M2_GDP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">(新)M2 VS GDP</span>
+    </a>
+  </div>
+  
+  
+  <div class="old-article">
+    <a href="../../../05/08/poemvssong_shade_and_honey/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">(旧)Shade and honey</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </div>
+  
+</div>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  
+  <div class="sidebar-module">
+    <h4>分类</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../categories/economic/">economic</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../categories/哲学/">哲学</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../categories/诗-歌/">诗*歌</a><span class="sidebar-module-list-count">3</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>标签云</h4>
+    <p class="tagcloud">
+      <a href="../../../../tags/GDP/" style="font-size: 10px;">GDP</a> <a href="../../../../tags/M2/" style="font-size: 10px;">M2</a> <a href="../../../../tags/Mark-Linkous/" style="font-size: 10px;">Mark_Linkous</a> <a href="../../../../tags/Semonides/" style="font-size: 10px;">Semonides</a> <a href="../../../../tags/macro/" style="font-size: 10px;">macro</a> <a href="../../../../tags/poem/" style="font-size: 10px;">poem</a> <a href="../../../../tags/哈贝马斯/" style="font-size: 20px;">哈贝马斯</a> <a href="../../../../tags/石油美元/" style="font-size: 10px;">石油美元</a> <a href="../../../../tags/翻译/" style="font-size: 20px;">翻译</a> <a href="../../../../tags/银行/" style="font-size: 10px;">银行</a>
+    </p>
+  </div>
+
+
+  
+  <div class="sidebar-module">
+    <h4>存档</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2018/06/">六月 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2018/03/">三月 2018</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2018/01/">一月 2018</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2017/09/">九月 2017</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2017/08/">八月 2017</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2017/05/">五月 2017</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="../../../../archives/2017/03/">三月 2017</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>最近的文章</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="../../../../2018/06/18/philosophy_individule_VS_society/">个体化与社会化</a>
+        </li>
+      
+        <li>
+          <a href="../../../../2018/03/03/poemvssong_You're Not Late! You're Not Early/">You&#39;re Not Late! You&#39;re Not Early</a>
+        </li>
+      
+        <li>
+          <a href="../../../../2018/01/11/economic_petrodolloar/">石油美元</a>
+        </li>
+      
+        <li>
+          <a href="../../../../2018/01/08/philosophy_one_vs_more/">“一”与“多”</a>
+        </li>
+      
+        <li>
+          <a href="../../../09/18/economic_M2_GDP/">M2 VS GDP</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Joshua Peng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+  
+<script>
+  var disqus_shortname = 'cicada-blog';
+  
+  var disqus_url = 'https://pianyu.github.io/2017/08/27/economic_bank_run/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+<script src="../../../../js/script.js"></script>
+
+</body>
+</html>

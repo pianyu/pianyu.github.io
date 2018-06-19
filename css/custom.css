@@ -12,6 +12,7 @@
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  src : url('../fonts/Georgia.ttf');
   color: #555;
 }
 
@@ -24,6 +25,7 @@ h6, .h6 {
   margin-top: 1em;
   margin-bottom: 15px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  src : url('../fonts/HelveticaNeue.ttf');
   font-weight: normal;
   color: #333;
 }
